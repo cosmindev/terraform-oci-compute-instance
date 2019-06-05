@@ -12,7 +12,12 @@ output "private_ip" {
 
 output "public_ip" {
   description = "Public IPs of created instances. "
-  value       = ["${oci_core_instance.this.*.public_ip}"]
+  value       = "${oci_core_instance.this.*.public_ip}"
+}
+
+output "display_name" {
+  description = "Display name. "
+  value       = "${oci_core_instance.this.*.display_name}"
 }
 
 output "instance_username" {

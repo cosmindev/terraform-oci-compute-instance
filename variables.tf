@@ -1,5 +1,6 @@
 // Copyright (c) 2018, Oracle and/or its affiliates. All rights reserved.
 
+variable "availability_domain" {}
 variable "compartment_ocid" {
   description = "Compartment's OCID where VCN will be created. "
 }
@@ -36,7 +37,7 @@ variable "shape" {
 
 variable "assign_public_ip" {
   description = "Whether the VNIC should be assigned a public IP address. "
-  default     = false
+  default     = true
 }
 
 variable "vnic_name" {

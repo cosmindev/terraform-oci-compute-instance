@@ -7,7 +7,7 @@ import (
 	"time"
 	"os"
 	//"github.com/gruntwork-io/terratest/modules/oci"
-	http_helper "github.com/gruntwork-io/terratest/modules/http-helper"
+	//http_helper "github.com/gruntwork-io/terratest/modules/http-helper"
 	//"github.com/gruntwork-io/terratest/modules/random"
 	"github.com/gruntwork-io/terratest/modules/terraform"
 	"gotest.tools/assert"
@@ -88,7 +88,7 @@ func TestOCIComputeInstanceTFModule(t *testing.T) {
 	timeBetweenRetries := 5 * time.Second
 	
 	// Verify that we get back a 200 OK with the expected instanceText
-	http_helper.HttpGetWithRetry(t, instanceURL, 200, instanceText, maxRetries, timeBetweenRetries)
+	//http_helper.HttpGetWithRetry(t, instanceURL, 200, instanceText, maxRetries, timeBetweenRetries)
 
 	// Verify we're getting back the outputs we expect - that the instance has been assigned with a public IP
 	assert.Assert(t, len(hasPublicIP) != 0)

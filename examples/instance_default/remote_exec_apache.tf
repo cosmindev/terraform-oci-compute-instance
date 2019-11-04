@@ -14,7 +14,7 @@ resource "null_resource" "configure_cluster_node_apache" {
     connection {
       user        = "opc"
       agent       = false
-      private_key = "${var.ssh_private_key}"
+      private_key = tostring("${var.ssh_private_key}")
       timeout     = "10m"
       host        = "${module.instance.public_ip[count.index]}"
     }
@@ -27,7 +27,7 @@ resource "null_resource" "configure_cluster_node_apache" {
     connection {
       user        = "opc"
       agent       = false
-      private_key = "${var.ssh_private_key}"
+      private_key = tostring("${var.ssh_private_key}")
       timeout     = "10m"
       host        = "${module.instance.public_ip[count.index]}"
     }

@@ -1,6 +1,5 @@
-# Copyright (c) 2019 Oracle and/or its affiliates,  All rights reserved.
-
 #!/bin/bash
+
 apt-get update
 apt install -y build-essential unzip go-dep
 

@@ -36,6 +36,7 @@ dep ensure
 #export TF_VAR_private_key_path=${GITHUB_WORKSPACE}/oci.pem
 export TF_ACTION_WORKING_DIR=${GITHUB_WORKSPACE}/examples/instance_default
 TERRAFORM_VERSION="$(terraform --version)"
+TF_VAR_private_key=$"${TF_VAR_private_key}"
 echo "------->>>Terraform version = ${TERRAFORM_VERSION}"
 echo "------->>> TF_VAR_tenancy_id= ${TF_VAR_tenancy_id}"
 echo "------->>> TF_VAR_user_id= ${TF_VAR_user_id}"

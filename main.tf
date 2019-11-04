@@ -70,6 +70,7 @@ resource "oci_core_volume" "this" {
 ####################
 # Volume Attachment
 ####################
+/*
 resource "oci_core_volume_attachment" "this" {
   count           = "${var.instance_count * length(var.block_storage_sizes_in_gbs)}"
   attachment_type = "${var.attachment_type}"
@@ -77,4 +78,4 @@ resource "oci_core_volume_attachment" "this" {
   instance_id     = "${oci_core_instance.this.*.id[count.index % var.instance_count]}"
   volume_id       = "${oci_core_volume.this.*.id[count.index]}"
   use_chap        = "${var.use_chap}"
-}
+}*/

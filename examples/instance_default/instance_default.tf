@@ -17,7 +17,7 @@ module "instance" {
 
   instance_count             = "${var.instance_count}"
   availability_domain        = "${var.availability_domain}"
-  compartment_ocid           = var.compartment_ocid
+  compartment_ocid           = "${var.compartment_ocid}"
   instance_display_name      = "${var.instance_display_name}"
   source_ocid                = "${var.source_ocid}"
   subnet_ocids               = [oci_core_subnet.test_subnet.id]

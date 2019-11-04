@@ -36,7 +36,7 @@ func TestOCIComputeInstanceTFModule(t *testing.T) {
 	
 	terraformOptions := &terraform.Options{
 		// The path to where our Terraform code is located
-		TerraformDir: "/Users/cotudor/Work/Tasks-FY20/SDF/SDF-20-EvaluateModules/CoreModules/ComputeInstanceTFModule/terraform-oci-compute-instance/examples/instance_default",
+		TerraformDir: "/examples/instance_default",
 		// Variables to pass to our Terraform code using -var options
 		Vars: map[string]interface{}{
 			// Oracle Cloud Infrastructure Authentication details

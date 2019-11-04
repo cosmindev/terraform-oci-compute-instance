@@ -20,9 +20,13 @@ cd $HOME/go/src/terratest/test
 
 #Install terratest and dependencies
 cat  << EOF > Gopkg.toml
-[[constraint]]
+ [[constraint]]
   name = "github.com/gruntwork-io/terratest"
-  version = "0.19.1"
+  version = "0.16.1"
+
+ [prune]
+  go-tests = true
+  unused-packages = true
 EOF
 
 dep ensure

@@ -29,7 +29,7 @@ func TestOCIComputeInstanceTFModule(t *testing.T) {
 	//instanceName := fmt.Sprintf("terratest-http-example-%s", uniqueID)
 	
 	// Specify the text the OCI Instance will return when we make HTTP requests to it.
-	instanceText := "Hello World from Apache running on test-cotud"
+	//instanceText := "Hello World from Apache running on test-cotud"
 	
 	// Pick an OCI region
 	//ociRegion := "uk-london-1"
@@ -73,7 +73,7 @@ func TestOCIComputeInstanceTFModule(t *testing.T) {
 	terraform.InitAndApply(t, terraformOptions)
 
 	// Run `terraform output` to get the value of an output variable
-	instanceURL := terraform.Output(t, terraformOptions, "instance_url")
+	//instanceURL := terraform.Output(t, terraformOptions, "instance_url")
 
 	// Run `terraform output` to get the values of output variables
 	hasPublicIP := terraform.Output(t, terraformOptions, "public_ip")
@@ -84,8 +84,8 @@ func TestOCIComputeInstanceTFModule(t *testing.T) {
 	testSSHToPublicHost(t, terraformOptions, keyPair)
 	
 	// It can take a minute or so for the Instance to boot up, so retry a few times
-	maxRetries := 30
-	timeBetweenRetries := 5 * time.Second
+	//maxRetries := 30
+	//timeBetweenRetries := 5 * time.Second
 	
 	// Verify that we get back a 200 OK with the expected instanceText
 	//http_helper.HttpGetWithRetry(t, instanceURL, 200, instanceText, maxRetries, timeBetweenRetries)

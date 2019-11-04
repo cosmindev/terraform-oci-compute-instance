@@ -35,6 +35,11 @@ dep ensure
 echo "${TF_VAR_private_key}" > ${GITHUB_WORKSPACE}/oci.pem
 export TF_VAR_private_key_path=${GITHUB_WORKSPACE}/oci.pem
 export TF_ACTION_WORKING_DIR=${GITHUB_WORKSPACE}/examples/instance_default
+TERRAFORM_VERSION="$(terraform --version)"
+TF_VAR_private_key=$"${TF_VAR_private_key}"
 
+echo "-------------------------"
+echo ${GITHUB_WORKSPACE}/oci.pem
+echo "-------------------------"
 
 go test -v $HOME/go/src/terratest/test/tf-oci-instance_test.go -timeout 20m

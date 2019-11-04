@@ -1,3 +1,5 @@
+# Copyright (c) 2019 Oracle and/or its affiliates,  All rights reserved.
+
 /*
  * @Author: cosmin.tudor@oracle.com 
  * @Date: 2018-11-08 12:44:08 
@@ -12,7 +14,7 @@ resource "null_resource" "configure_cluster_node_apache" {
     connection {
       user        = "opc"
       agent       = false
-      private_key = "${chomp(file(var.ssh_private_key_path))}"
+      private_key = var.ssh_private_key
       timeout     = "10m"
       host        = "${module.instance.public_ip[count.index]}"
     }
@@ -25,7 +27,7 @@ resource "null_resource" "configure_cluster_node_apache" {
     connection {
       user        = "opc"
       agent       = false
-      private_key = "${chomp(file(var.ssh_private_key_path))}"
+      private_key = var.ssh_private_key
       timeout     = "10m"
       host        = "${module.instance.public_ip[count.index]}"
     }

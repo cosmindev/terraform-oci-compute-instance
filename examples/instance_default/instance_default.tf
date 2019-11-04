@@ -26,12 +26,12 @@ module "instance" {
 }
 
 resource "oci_core_subnet" "test_subnet" {
-  cidr_block        = var.cidr
-  compartment_id    = var.compartment_ocid
-  vcn_id            = var.vcn_id
+  cidr_block        = "${var.cidr}"
+  compartment_id    = "${var.compartment_ocid}"
+  vcn_id            = "${var.vcn_id}"
   display_name      = "temp_subnet"
   dns_label         = "tempsubnet"
-  security_list_ids = [oci_core_security_list.sec-list.id]
+  security_list_ids = ["${oci_core_security_list.sec-list.id}"]
   route_table_id    = "ocid1.routetable.oc1.uk-london-1.aaaaaaaassp2z6qhsn7lcivqgav67pfehtk3bddbqcaglnbzb4ezkyfs5tvq"
   dhcp_options_id   = "ocid1.dhcpoptions.oc1.uk-london-1.aaaaaaaa7ocyua574mbo3l6tid6jiqh4wlzntjebzyhj7ftzf5tugajlvpua"
 }

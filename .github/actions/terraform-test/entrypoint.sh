@@ -23,7 +23,7 @@ cd $HOME/go/src/terratest/test
 cat  << EOF > Gopkg.toml
  [[constraint]]
   name = "github.com/gruntwork-io/terratest"
-  version = "0.16.1"
+  version = "0.22.2"
  [prune]
   go-tests = true
   unused-packages = true

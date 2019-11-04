@@ -43,7 +43,7 @@ func TestOCIComputeInstanceTFModule(t *testing.T) {
 			"tenancy_ocid": os.Getenv("TF_VAR_tenancy_id"),
 			"user_ocid": os.Getenv("TF_VAR_user_id"),
 			"fingerprint": os.Getenv("TF_VAR_fingerprint"),
-			"private_key": os.Getenv("TF_VAR_private_key"),
+			"private_key_path": os.Getenv("TF_VAR_private_key_path"),
 
 			// Region
 			"region": "uk-london-1",

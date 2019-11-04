@@ -32,19 +32,9 @@ EOF
 dep ensure
 
 #Set up environment to run the terraform code
-#echo "${TF_VAR_private_key}" > ${GITHUB_WORKSPACE}/oci.pem
-#export TF_VAR_private_key_path=${GITHUB_WORKSPACE}/oci.pem
+echo "${TF_VAR_private_key}" > ${GITHUB_WORKSPACE}/oci.pem
+export TF_VAR_private_key_path=${GITHUB_WORKSPACE}/oci.pem
 export TF_ACTION_WORKING_DIR=${GITHUB_WORKSPACE}/examples/instance_default
-TERRAFORM_VERSION="$(terraform --version)"
-TF_VAR_private_key=$"${TF_VAR_private_key}"
-echo "------->>>Terraform version = ${TERRAFORM_VERSION}"
-echo "------->>> TF_VAR_tenancy_id= ${TF_VAR_tenancy_id}"
-echo "------->>> TF_VAR_user_id= ${TF_VAR_user_id}"
-echo "------->>> TF_VAR_fingerprint= ${TF_VAR_fingerprint}"
-echo "------->>> TF_VAR_private_key= ${TF_VAR_private_key}"
-echo "------->>> TF_VAR_ssh_authorized_keys= ${TF_VAR_ssh_authorized_keys}"
-echo "------->>> TF_VAR_ssh_private_key= ${TF_VAR_ssh_private_key}"
-ENV="$(env)"
-echo "------->>> ENV= ${ENV}"
+
 
 go test -v $HOME/go/src/terratest/test/tf-oci-instance_test.go -timeout 20m

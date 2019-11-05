@@ -41,5 +41,8 @@ TF_VAR_private_key=$"${TF_VAR_private_key}"
 echo "-------------------------"
 cat ${GITHUB_WORKSPACE}/oci.pem
 echo "-------------------------"
+echo $TF_VAR_private_key_path
+cat $TF_VAR_private_key_path
+echo "-------------------------"
 
 go test -v $HOME/go/src/terratest/test/tf-oci-instance_test.go -timeout 20m

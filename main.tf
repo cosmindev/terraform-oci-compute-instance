@@ -67,6 +67,7 @@ resource "oci_core_volume" "this" {
   size_in_gbs         = "${element(var.block_storage_sizes_in_gbs, floor(count.index / var.instance_count))}"
 }
 
+
 ####################
 # Volume Attachment
 ####################

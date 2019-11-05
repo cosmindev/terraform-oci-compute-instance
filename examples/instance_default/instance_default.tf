@@ -65,7 +65,7 @@ resource "oci_core_security_list" "sec-list" {
       max = 443
     }
   }
-
+/*
   ingress_security_rules {
     source   = "0.0.0.0/0"
     protocol = "${local.tcp_protocol}"
@@ -74,7 +74,7 @@ resource "oci_core_security_list" "sec-list" {
       min = 22
       max = 22
     }
-  }
+  }*/
 }
 
 locals {

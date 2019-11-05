@@ -1,10 +1,12 @@
+# Copyright (c) 2019 Oracle and/or its affiliates,  All rights reserved.
+
 /*
  * @Author: cosmin.tudor@oracle.com 
  * @Date: 2018-11-08 12:44:08 
  * @Last Modified by: cosmin.tudor@oracle.com
  * @Last Modified time: 2018-11-09 12:02:13
  */
- resource "null_resource" "configure_cluster_node_apache" {
+resource "null_resource" "configure_cluster_node_apache" {
   count = "${var.instance_count}"
 
 

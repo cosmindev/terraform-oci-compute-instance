@@ -13,9 +13,11 @@ compartment_ocid = "<compartment OCID>"
 # Compute Instance Configurations
 instance_display_name = "<Compute instance's display name>"
 source_ocid = "<The OCID of an image or a boot volume>"
-vcn_ocid = "<VCN OCID>"
-subnet_ocids = ["<a list of the subnet OCIDs which to create the VNICs in>"]
+vcn_id  = "<vcn_ocid>"
+cidr    = "<subnet_cidr>"
 ssh_authorized_keys = "<path to the public key>"
+ssh_private_key_path  = "<path to the ssh private key>"
+instance_count        = "<number of instances>"
 
 # Storage Volume Configurations
 block_storage_sizes_in_gbs = [<a list specifying all attached storage volumes' sizes in unit GB>]

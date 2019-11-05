@@ -1,3 +1,5 @@
+# Copyright (c) 2019 Oracle and/or its affiliates,  All rights reserved.
+
 // Copyright (c) 2018, Oracle and/or its affiliates. All rights reserved.
 
 ####################
@@ -31,7 +33,7 @@ resource "oci_core_instance" "this" {
   }
 
   metadata = {
-    ssh_authorized_keys = "${file("${var.ssh_authorized_keys}")}"
+    ssh_authorized_keys = var.ssh_authorized_keys
     user_data           = "${var.user_data}"
   }
 
@@ -65,9 +67,11 @@ resource "oci_core_volume" "this" {
   size_in_gbs         = "${element(var.block_storage_sizes_in_gbs, floor(count.index / var.instance_count))}"
 }
 
+
 ####################
 # Volume Attachment
 ####################
+
 resource "oci_core_volume_attachment" "this" {
   count           = "${var.instance_count * length(var.block_storage_sizes_in_gbs)}"
   attachment_type = "${var.attachment_type}"

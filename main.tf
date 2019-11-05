@@ -67,7 +67,7 @@ resource "oci_core_volume" "this" {
   size_in_gbs         = "${element(var.block_storage_sizes_in_gbs, floor(count.index / var.instance_count))}"
 }
 
-
+/*
 ####################
 # Volume Attachment
 ####################
@@ -79,4 +79,4 @@ resource "oci_core_volume_attachment" "this" {
   instance_id     = "${oci_core_instance.this.*.id[count.index % var.instance_count]}"
   volume_id       = "${oci_core_volume.this.*.id[count.index]}"
   use_chap        = "${var.use_chap}"
-}
+}*/

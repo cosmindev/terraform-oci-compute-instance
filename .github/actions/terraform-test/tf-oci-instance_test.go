@@ -80,8 +80,7 @@ func TestOCIComputeInstanceTFModule(t *testing.T) {
 	// Run `terraform output` to get the values of output variables
 	hasPublicIP := terraform.Output(t, terraformOptions, "public_ip")
 
-	keyPair := GetKeyPair("/Users/cotudor/my_ssh_keys/cos_key.openssh", "/Users/cotudor/my_ssh_keys/cos_key.pub")
-    //keyPair := GetKeyPair("/Users/cotudor/my_ssh_keys/SantaClara_private_OpenSSH_key.prv", "/Users/cotudor/my_ssh_keys/SantaClara.pub")
+	keyPair := GetKeyPair(os.Getenv("TF_VAR_ssh_private_key_path"), os.Getenv("TF_VAR_ssh_authorized_key_path"))
 
 	testSSHToPublicHost(t, terraformOptions, keyPair)
 	

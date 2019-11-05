@@ -15,7 +15,7 @@ variable "cidr" {}
 variable "source_ocid" {}
 variable "ssh_authorized_keys" {}
 
-variable "ssh_private_key" {}
+variable "ssh_private_key_path" {}
 
 variable "block_storage_sizes_in_gbs" {
   type = "list"

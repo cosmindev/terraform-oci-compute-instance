@@ -46,7 +46,7 @@ func TestOCIComputeInstanceTFModule(t *testing.T) {
 			"compartment_ocid": "ocid1.compartment.oc1..aaaaaaaacnmuyhg2mpb3z6v6egermq47nai3jk5qaoieg3ztinqhamalealq",
 			
 			// Compute Instance Configurations
-			"instance_display_name": "test-cotud",
+			"instance_display_name": "test-cotud-techflow",
 			"source_ocid": "ocid1.image.oc1.uk-london-1.aaaaaaaa32voyikkkzfxyo4xbdmadc2dmvorfxxgdhpnk6dw64fa3l4jh7wa",
 			"vcn_id": "ocid1.vcn.oc1.uk-london-1.aaaaaaaahdze4mulmvmym4xvrj22cb2zq72tm6qul2oarfnpub6sxwv77owq",
 			"cidr" : "10.20.10.0/24",

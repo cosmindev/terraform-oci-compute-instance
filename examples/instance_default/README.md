@@ -27,9 +27,7 @@ ssh_authorized_keys = "/home/opc/.ssh/id_rsa.pub"
 # Storage Volume Configurations
 block_storage_sizes_in_gbs = [60, 70]
 ```
-
 Then apply the example using the following commands:
-
 ```
 $ terraform init
 $ terraform plan
